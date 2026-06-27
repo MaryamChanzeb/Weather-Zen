@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('image/bg.gif');
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    backdrop-filter: blur(10px);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%;
+    max-width: 1200px; /* Ensure it doesn’t grow too wide */
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh; /* Full viewport height */
+    box-sizing: border-box;
+}
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff; 
+  }
+  
+  /* Change the text color of paragraphs */
+  p {
+    color: #fff; 
+  }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-gap: 1rem;
+}
+
+.img_section {
+    border-radius: 25px;
+    background-image: url("../image/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transform: scale(1.03);
+}
+
+.img_section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #5c6bc0 10%, #0d47a1 100%);
+    opacity: 0.7;
+    z-index: -1;
+    border-radius: 25px;
+}
+
+.default_info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.default_info img {
+    width: 80%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.default_info h2 {
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+
+.weather_temp {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.content_section {
+    padding: 1.5rem;
+}
+
+.content_section form {
+    margin: 1.5rem;
+    position: relative;
+}
+
+.content_section form input {
+    width: 84%;
+    outline: none;
+    background: transparent;
+    border: 1px solid #37474f;
+    border-radius: 5px;
+    padding: 0.7rem 1rem;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.content_section form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 1rem 0.7rem;
+    background: #5c6bc0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.day_info .content {
+    display: flex; 
+    justify-content: space-between;
+    padding: 0.4rem 0;
+    color: #fff;
+}
+
+.day_info .content .title {
+    font-weight: 600;
+}
+
+/* Updated CSS for horizontal weekly forecast */
+.list_content ul {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to a new line */
+    justify-content: center; /* Center the items */
+    align-items: center;
+    list-style-type: none;
+    margin: 2rem 0;
+    gap: 10px; /* Add space between items */
+    padding: 0; /* Ensure no extra padding */
+    overflow: hidden; /* Hide any overflow content */
+}
+
+.list_content ul li {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in;
+    width: 70px;
+    background-color: rgba(255, 255, 255, 0.1); /* Background color */
+    color: #fff; /* Default text color for forecast section */
+}
+
+.list_content ul li span {
+    color: #ffffff; /* Change color for day and temperature text */
+     /* Make the text bold */
+}
+
+.list_content ul li:hover {
+    transform: scale(1.1);
+    background-color: black;
+    color: #232931;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+
+.list_content ul li img {
+    width: 50%;
+    object-fit: cover;
+}
