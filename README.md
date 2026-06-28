@@ -60,11 +60,8 @@ WeatherZen/
 ├── script.js
 ├── README.md
 │
-├── images/
-│
-├── image/
-│
-└── icons/
+├── images
+
 ```
 
 ---
